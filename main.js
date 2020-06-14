@@ -42,7 +42,7 @@ function restart() {
     deck = [];
     discardDeck = [];
     currentCard = null;
-    $('#current-card').attr("src", "images/back.png");
+    $('#current-card').attr("src", "images/back.jpg");
     $('#current-card').attr("alt", "back of card");
     
         
@@ -85,7 +85,7 @@ function drawCard() {
     updateNumbers();
     
     //display current card
-    $('#current-card').attr("src", "card-" + currentCard);
+    $('#current-card').attr("src", "images/card-" + currentCard + ".jpg");
     $('#current-card').attr("alt", "card-" + currentCard);
 }
 
