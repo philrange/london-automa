@@ -32,7 +32,7 @@ body {
 /*Top Menu*/
 
 header {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     height: 40px;
     color: white;
     margin-top: 4px;
@@ -45,7 +45,7 @@ header {
 }
 
 .menu-logo {
-    color: rgba(20, 200, 200, 0.8);
+    color: rgba(179,232,222,0.5);
 }
 
 .menu-item a {
