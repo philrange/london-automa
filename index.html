@@ -56,7 +56,12 @@
     <!-- main page -->
     <div class="container">
 
-        <div id='select-deck-container'>
+        <div id='intro'>
+            A helper app for the AutoMartin automa for London created by sangwizz on bgg (<a href="https://boardgamegeek.com/filepage/192908/automartin-london-automa-london-second-edition">https://boardgamegeek.com/filepage/192908/automartin-london-automa-london-second-edition</a>)
+        <div class="draw-button"><button type="button" class="btn btn-primary" onclick="start()">Start game</button></div>
+        </div>
+            
+        <div id='select-deck-container' class="initially-hidden">
             Select deck
             <div id="select-deck">
                 <button type="button" class="btn btn-success btn-lg btn-block" onclick="selectDifficulty1()">I</button>
@@ -67,11 +72,7 @@
 
 
         <div id='current-card-container' class="container-fluid initially-hidden">
-<!--            <div><span>Current card</span></div>-->
-
-<!--            <div class="card-deck" id="current-card-container">-->
                 <img id="current-card" src="images/back.jpg" alt="back of card"/>
-<!--            </div>-->
             <div class="draw-button"><button type="button" class="btn btn-primary" onclick="drawCard()">Draw a card</button></div>
 
         </div>
@@ -87,7 +88,6 @@
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>-->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

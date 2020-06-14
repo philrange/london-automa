@@ -53,7 +53,9 @@ header {
     text-decoration: none;
 }
 
-
+#intro {
+    display: block;
+}
 
 .initially-hidden {
     display: none;

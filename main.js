@@ -12,26 +12,41 @@ function loadDecks() {
     deck3 = ['iii1', 'iii2', 'iii3', 'iii4', 'iii5'];   
 }
 
+function start() {
+    
+    $('#intro').slideToggle("slow", goToSelectDeck());   
+}
+
+function goToSelectDeck() {
+    $('#select-deck-container').slideToggle();
+}
+
 function selectDifficulty1() {
-    deck = deck1;
+    deck = deck1.slice();
     $('#difficulty').html("I");
+    $('#difficulty').removeClass("badge-warning");
+    $('#difficulty').removeClass("badge-danger");
     $('#difficulty').addClass("badge-success");
     startGame();
 }
 
 function selectDifficulty2() {
-    deck = deck1;
-    deck = deck.concat(deck2);
+    deck = deck1.slice();
+    deck = deck.concat(deck2.slice());
     $('#difficulty').html("II");
+    $('#difficulty').removeClass("badge-success");
+    $('#difficulty').removeClass("badge-danger");
     $('#difficulty').addClass("badge-warning");
     startGame();
 }
 
 function selectDifficulty3() {
-    deck = deck1;
-    deck = deck.concat(deck2);
-    deck = deck.concat(deck3);
+    deck = deck1.slice();
+    deck = deck.concat(deck2.slice());
+    deck = deck.concat(deck3.slice());
     $('#difficulty').html("III");
+    $('#difficulty').removeClass("badge-warning");
+    $('#difficulty').removeClass("badge-success");
     $('#difficulty').addClass("badge-danger");
     startGame();
 }
