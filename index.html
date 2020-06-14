@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>London Automa</title>
+
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap-theme.min.css">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        
+        <script src="main.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    </head>
+
+    <body onLoad="loadDecks()">
+
+
+        <div class="background-container">
+            <div class="top-background"></div>
+        </div>
+
+        <header>
+            <span class="menu-logo">London Automa</span> 
+            <span class="menu-divider"></span>  
+            <span class="menu-item initially-hidden" id="difficulty-menu-item">
+                Difficulty: <span class="badge" id="difficulty"></span>
+            </span>
+
+            <span class="menu-item initially-hidden" id="number-of-cards-menu-item">
+                Cards in deck: <span class="badge badge-light" id="number-of-cards"></span>
+            </span>
+            
+            <span class="menu-item initially-hidden" id="number-of-discarded-cards-menu-item">
+                Cards in discard pile: <span class="badge badge-light" id="number-of-discarded-cards"></span>
+            </span>
+
+            <span class="menu-item initially-hidden" id="restart-menu-item">
+                <button type="button" class="btn btn-warning btn-sm" onClick="restart()">
+                    <span class="fas fa-sync-alt"></span>
+                    <span class="d-none d-sm-inline">New Game</span>
+                </button>
+            </span>
+
+        </header>
+
+
+
+    <!-- main page -->
+    <div class="container">
+
+        <div id='select-deck-container'>
+            Select deck
+            <div id="select-deck">
+                <button type="button" class="btn btn-success btn-lg btn-block" onclick="selectDifficulty1()">I</button>
+                <button type="button" class="btn btn-success btn-lg btn-block" onclick="selectDifficulty2()">II</button>
+                <button type="button" class="btn btn-success btn-lg btn-block" onclick="selectDifficulty3()">III</button>
+            </div>
+        </div>
+
+
+        <div id='current-card-container' class="container-fluid initially-hidden">
+<!--            <div><span>Current card</span></div>-->
+
+<!--            <div class="card-deck" id="current-card-container">-->
+                <img id="current-card" src="images/back.png" alt="back of card"/>
+<!--            </div>-->
+            <div class="draw-button"><button type="button" class="btn btn-primary" onclick="drawCard()">Draw a card</button></div>
+
+        </div>
+
+
+        <div>
+            <span id="debug"></span>
+        </div>   
+
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
