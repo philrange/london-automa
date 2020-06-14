@@ -63,6 +63,7 @@ function startGame() {
     
     $('#restart-menu-item').show();
     
+    $('.menu-logo').addClass("d-none d-sm-inline");
     $('#select-deck-container').slideToggle("slow", goToCurrentCard());
     
 }
