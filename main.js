@@ -12,13 +12,14 @@ function loadDecks() {
     deck3 = ['iii1', 'iii2', 'iii3', 'iii4', 'iii5'];   
 }
 
-function start() {
-    
-    $('#intro').slideToggle("slow", goToSelectDeck());   
+function toIntro() {
+
+		$('.initially-hidden').hide()
+		$('#intro').show()
 }
 
-function goToSelectDeck() {
-    $('#select-deck-container').slideToggle();
+function start() {
+    $('#intro').slideToggle("slow", restart());   
 }
 
 function selectDifficulty1() {
@@ -64,8 +65,8 @@ function restart() {
     //show logo
     $('.menu-logo').removeClass("d-none d-sm-inline");
 
-    //show initial page
-    $('#select-deck-container').show();
+    //show select difficulty page
+    $('#select-deck-container').slideToggle();
 }
 
 function startGame() {
@@ -118,4 +119,3 @@ function selectRandomCard() {
 
     return card;
 }
-
